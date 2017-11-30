@@ -1,0 +1,12 @@
+Source: ros-lunar-vision-msgs
+Section: misc
+Priority: extra
+Maintainer: Adam Allevato <adam.d.allevato@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-lunar-catkin, ros-lunar-geometry-msgs, ros-lunar-message-generation, ros-lunar-message-runtime, ros-lunar-rosunit, ros-lunar-sensor-msgs, ros-lunar-std-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-lunar-vision-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lunar-geometry-msgs, ros-lunar-message-generation, ros-lunar-message-runtime, ros-lunar-sensor-msgs, ros-lunar-std-msgs
+Description: Messages for interfacing with various computer vision pipelines, such as object detectors.
