@@ -1,3 +1,26 @@
+## vision_msgs (ardent) - 1.0.0-0
+
+The packages in the `vision_msgs` repository were released into the `ardent` distro by running `/usr/bin/bloom-release --rosdistro ardent --track ardent vision_msgs --edit` on `Thu, 19 Apr 2018 18:42:48 -0000`
+
+The `vision_msgs` package was released.
+
+Version of package(s) in repository `vision_msgs`:
+
+- upstream repository: https://github.com/Kukanani/vision_msgs.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `1.0.0-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.4`
+- catkin_pkg version: `0.4.1`
+- rosdep version: `0.12.2`
+- rosdistro version: `0.6.8`
+- vcstools version: `0.1.40`
+
+
 ## vision_msgs (melodic) - 0.0.1-0
 
 The packages in the `vision_msgs` repository were released into the `melodic` distro by running `/usr/bin/bloom-release vision_msgs --track melodic --rosdistro melodic --new-track` on `Wed, 21 Mar 2018 23:32:07 -0000`
