@@ -1,0 +1,12 @@
+Source: ros-ardent-vision-msgs
+Section: misc
+Priority: extra
+Maintainer: Adam Allevato <adam.d.allevato@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-ardent-ament-cmake, ros-ardent-ament-lint-auto, ros-ardent-ament-lint-common, ros-ardent-geometry-msgs, ros-ardent-rosidl-default-generators, ros-ardent-sensor-msgs, ros-ardent-std-msgs, ros-ardent-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-ardent-vision-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-ardent-geometry-msgs, ros-ardent-rosidl-default-runtime, ros-ardent-sensor-msgs, ros-ardent-std-msgs, ros-ardent-ros-workspace
+Description: Messages for interfacing with various computer vision pipelines, such as object detectors.
