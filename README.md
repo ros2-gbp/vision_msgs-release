@@ -1,3 +1,26 @@
+## vision_msgs (foxy) - 2.0.0-1
+
+The packages in the `vision_msgs` repository were released into the `foxy` distro by running `/usr/bin/bloom-release --rosdistro foxy --track foxy vision_msgs` on `Tue, 11 Aug 2020 02:41:34 -0000`
+
+The `vision_msgs` package was released.
+
+Version of package(s) in repository `vision_msgs`:
+
+- upstream repository: https://github.com/Kukanani/vision_msgs.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `2.0.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.7`
+- catkin_pkg version: `0.4.22`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.2`
+- vcstools version: `0.1.42`
+
+
 ## vision_msgs (eloquent) - 2.0.0-2
 
 The packages in the `vision_msgs` repository were released into the `eloquent` distro by running `/usr/bin/bloom-release --rosdistro eloquent --track eloquent vision_msgs` on `Tue, 11 Aug 2020 02:32:35 -0000`
