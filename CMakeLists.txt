@@ -2,7 +2,12 @@ cmake_minimum_required(VERSION 3.5)
 project(vision_msgs)
 
 if(NOT WIN32)
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Wall -Wextra -Wpedantic")
+  if(NOT CMAKE_CXX_STANDARD)
+    set(CMAKE_CXX_STANDARD 14)
+  endif()
+  if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+    add_compile_options(-Wall -Wextra -Wpedantic)
+  endif()
 endif()
 
 find_package(ament_cmake REQUIRED)
@@ -12,7 +17,9 @@ find_package(rosidl_default_generators REQUIRED)
 
 set(msg_files
   msg/BoundingBox2D.msg
+  msg/BoundingBox2DArray.msg
   msg/BoundingBox3D.msg
+  msg/BoundingBox3DArray.msg
   msg/Classification.msg
   msg/Detection2DArray.msg
   msg/Detection2D.msg
@@ -20,6 +27,8 @@ set(msg_files
   msg/Detection3D.msg
   msg/ObjectHypothesis.msg
   msg/ObjectHypothesisWithPose.msg
+  msg/Point2D.msg
+  msg/Pose2D.msg
   msg/VisionInfo.msg
 )
 
