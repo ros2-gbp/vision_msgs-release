@@ -17,7 +17,6 @@ find_package(rosidl_default_generators REQUIRED)
 
 set(msg_files
   msg/BoundingBox2D.msg
-  msg/BoundingBox2DArray.msg
   msg/BoundingBox3D.msg
   msg/BoundingBox3DArray.msg
   msg/Classification.msg
@@ -27,8 +26,6 @@ set(msg_files
   msg/Detection3D.msg
   msg/ObjectHypothesis.msg
   msg/ObjectHypothesisWithPose.msg
-  msg/Point2D.msg
-  msg/Pose2D.msg
   msg/VisionInfo.msg
 )
 

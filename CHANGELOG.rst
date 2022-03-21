@@ -2,26 +2,10 @@
 Changelog for package vision_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-4.0.0 (2022-03-19)
+3.0.2 (2022-03-20)
 ------------------
-* Merge pull request `#67 <https://github.com/ros-perception/vision_msgs/issues/67>`_ from ijnek/ijnek-point-2d
-  Add Point2d message, and use it in Pose2D
-* Update msg/Point2D.msg
-  Co-authored-by: Adam Allevato <Kukanani@users.noreply.github.com>
-* add Point2D message
-* replace deprecated pose2d with pose (`#64 <https://github.com/ros-perception/vision_msgs/issues/64>`_)
-  * replace deprecated geometry_msgs/Pose2D with geometry_msgs/Pose
-  * replace Pose2D with Pose.
-  * add Pose2D.msg
-  * undo some changes made
-  * Update msg/Pose2D.msg
-  Co-authored-by: Adam Allevato <Kukanani@users.noreply.github.com>
-  Co-authored-by: Adam Allevato <Kukanani@users.noreply.github.com>
-* Clarify array messages in readme
-* Trailing newline in bbox2Darray
-* Add bbox array msgs to CMakeLists
-* Added BoundingBox2DArray message
-* Contributors: Adam Allevato, Fruchtzwerg94, Kenji Brameld
+* Build BoundingBox3DArray
+* Contributors: Adam Allevato
 
 3.0.1 (2021-07-20)
 ------------------
