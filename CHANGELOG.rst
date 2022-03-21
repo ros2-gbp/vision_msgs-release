@@ -2,6 +2,11 @@
 Changelog for package vision_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+3.0.2 (2022-03-20)
+------------------
+* Build BoundingBox3DArray
+* Contributors: Adam Allevato
+
 3.0.1 (2021-07-20)
 ------------------
 * Patch for how C++14 is set for ROS2 (`#58 <https://github.com/ros-perception/vision_msgs/issues/58>`_)
