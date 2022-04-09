@@ -1,61 +1,50 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.0.2)
 project(vision_msgs)
 
-if(NOT WIN32)
-  if(NOT CMAKE_CXX_STANDARD)
-    set(CMAKE_CXX_STANDARD 14)
-  endif()
-  if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-    add_compile_options(-Wall -Wextra -Wpedantic)
-  endif()
-endif()
+find_package(catkin REQUIRED COMPONENTS
+  message_generation
+  std_msgs
+  sensor_msgs
+  geometry_msgs)
 
-find_package(ament_cmake REQUIRED)
-find_package(std_msgs REQUIRED)
-find_package(geometry_msgs REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
+include_directories(include)
 
-set(msg_files
-  msg/BoundingBox2D.msg
-  msg/BoundingBox3D.msg
-  msg/BoundingBox3DArray.msg
-  msg/Classification.msg
-  msg/Detection2DArray.msg
-  msg/Detection2D.msg
-  msg/Detection3DArray.msg
-  msg/Detection3D.msg
-  msg/ObjectHypothesis.msg
-  msg/ObjectHypothesisWithPose.msg
-  msg/VisionInfo.msg
+add_message_files(
+  DIRECTORY msg
+  FILES
+  BoundingBox2D.msg
+  BoundingBox2DArray.msg
+  BoundingBox3D.msg
+  BoundingBox3DArray.msg
+  Classification2D.msg
+  Classification3D.msg
+  Detection2DArray.msg
+  Detection2D.msg
+  Detection3DArray.msg
+  Detection3D.msg
+  ObjectHypothesis.msg
+  ObjectHypothesisWithPose.msg
+  VisionInfo.msg
 )
 
-rosidl_generate_interfaces(${PROJECT_NAME}
-  ${msg_files}
-  DEPENDENCIES std_msgs geometry_msgs
-  ADD_LINTER_TESTS)
+generate_messages(DEPENDENCIES
+  std_msgs
+  sensor_msgs
+  geometry_msgs
+)
+
+catkin_package(CATKIN_DEPENDS
+  message_runtime
+  std_msgs
+  sensor_msgs
+  geometry_msgs
+)
 
 install(DIRECTORY include/${PROJECT_NAME}/
-  DESTINATION include/${PROJECT_NAME}
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+  FILES_MATCHING PATTERN "*.h"
 )
 
-if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-
-  ament_lint_auto_find_test_dependencies()
-
-  ament_add_gtest(vision_msgs_test test/main.cpp)
-  add_dependencies(vision_msgs_test ${PROJECT_NAME})
-  ament_target_dependencies(vision_msgs_test
-    geometry_msgs
-    std_msgs
-  )
-  # TODO(sloretz) rosidl_generate_interfaces() should make using generated messages in same project simpler
-  target_include_directories(vision_msgs_test PUBLIC
-    include
-    ${CMAKE_CURRENT_BINARY_DIR}/rosidl_generator_cpp
-  )
+if (CATKIN_ENABLE_TESTING)
+  add_subdirectory(test)
 endif()
-
-ament_export_dependencies(rosidl_default_runtime)
-ament_export_include_directories(include)
-ament_package()
