@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.0.2)
 project(vision_msgs)
 
 find_package(catkin REQUIRED COMPONENTS
@@ -13,7 +13,9 @@ add_message_files(
   DIRECTORY msg
   FILES
   BoundingBox2D.msg
+  BoundingBox2DArray.msg
   BoundingBox3D.msg
+  BoundingBox3DArray.msg
   Classification2D.msg
   Classification3D.msg
   Detection2DArray.msg
