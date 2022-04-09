@@ -1,0 +1,21 @@
+ros-noetic-vision-msgs (0.0.2-1buster) buster; urgency=high
+
+  * Added BoundingBox2DArray message #60 <https://github.com/ros-perception/vision_msgs/issues/60> from Fruchtzwerg94/array_for_2d_bounding_box
+  * Upgrade CMake version to avoid CMP0048 warning
+  * add BoundingBox3DArray message (#30 <https://github.com/ros-perception/vision_msgs/issues/30>)
+    * add BoundingBoxArray message
+  * Make message_generation and message_runtime use more specific depend tags (#24 <https://github.com/ros-perception/vision_msgs/issues/24>)
+  * Fix dependency of unit test. (#14 <https://github.com/ros-perception/vision_msgs/issues/14>)
+  * Minor bugfixes and code style updates
+  * Contributors: Adam Allevato, Fruchtzwerg94, Leroy Rügemer, Masaya Kataoka, Ronald Ensing, mistermult
+
+ -- Adam Allevato <adam.d.allevato@gmail.com>  Sat, 09 Apr 2022 07:00:00 -0000
+
+ros-noetic-vision-msgs (0.0.1-1buster) buster; urgency=high
+
+  * Initial commit
+  * Contributors: Adam Allevato, Martin Gunther, procopiostein
+
+ -- Adam Allevato <adam.d.allevato@gmail.com>  Tue, 14 Nov 2017 08:00:00 -0000
+
+
