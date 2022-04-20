@@ -146,7 +146,8 @@ tracks:
     ros_distro: humble
     vcs_type: git
     vcs_uri: https://github.com/ros-perception/vision_msgs.git
-    version: :{auto}
+    version: 4.0.0
+    version_saved: :{auto}
   kinetic:
     actions:
     - bloom-export-upstream :{vcs_local_uri} :{vcs_type} --tag :{release_tag} --display-uri
