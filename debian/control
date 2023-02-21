@@ -1,0 +1,12 @@
+Source: ros-humble-vision-msgs
+Section: misc
+Priority: optional
+Maintainer: Adam Allevato <adam.d.allevato@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-humble-ament-cmake, ros-humble-ament-cmake-gtest <!nocheck>, ros-humble-ament-lint-auto <!nocheck>, ros-humble-ament-lint-common <!nocheck>, ros-humble-geometry-msgs, ros-humble-rosidl-default-generators, ros-humble-std-msgs, ros-humble-ros-workspace, ros-humble-rosidl-typesupport-fastrtps-c, ros-humble-rosidl-typesupport-fastrtps-cpp
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-humble-vision-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-humble-geometry-msgs, ros-humble-rosidl-default-runtime, ros-humble-std-msgs, ros-humble-ros-workspace
+Description: Messages for interfacing with various computer vision pipelines, such as object detectors.
