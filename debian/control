@@ -1,0 +1,12 @@
+Source: ros-rolling-vision-msgs-rviz-plugins
+Section: misc
+Priority: optional
+Maintainer: Georg Novotny <georg.novotny@aon.at>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake, ros-rolling-ament-cmake-python, ros-rolling-ament-lint-auto <!nocheck>, ros-rolling-ament-lint-common <!nocheck>, ros-rolling-pluginlib, ros-rolling-rclcpp, ros-rolling-rclpy, ros-rolling-rviz-common, ros-rolling-rviz-default-plugins, ros-rolling-rviz-rendering, ros-rolling-rviz2, ros-rolling-vision-msgs, ros-rolling-yaml-cpp-vendor, ros-rolling-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-rolling-vision-msgs-rviz-plugins
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-numpy, ros-rolling-pluginlib, ros-rolling-rclcpp, ros-rolling-rclpy, ros-rolling-rviz-common, ros-rolling-rviz-default-plugins, ros-rolling-rviz-rendering, ros-rolling-rviz2, ros-rolling-vision-msgs, ros-rolling-yaml-cpp-vendor, ros-rolling-ros-workspace
+Description: RVIZ2 plugins for visualizing vision_msgs
