@@ -1,0 +1,12 @@
+Source: ros-jazzy-vision-msgs-rviz-plugins
+Section: misc
+Priority: optional
+Maintainer: Georg Novotny <georg.novotny@aon.at>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake, ros-jazzy-ament-cmake-python, ros-jazzy-ament-lint-auto <!nocheck>, ros-jazzy-ament-lint-common <!nocheck>, ros-jazzy-pluginlib, ros-jazzy-rclcpp, ros-jazzy-rclpy, ros-jazzy-rviz-common, ros-jazzy-rviz-default-plugins, ros-jazzy-rviz-rendering, ros-jazzy-rviz2, ros-jazzy-vision-msgs, ros-jazzy-yaml-cpp-vendor, ros-jazzy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-vision-msgs-rviz-plugins
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-numpy, ros-jazzy-pluginlib, ros-jazzy-rclcpp, ros-jazzy-rclpy, ros-jazzy-rviz-common, ros-jazzy-rviz-default-plugins, ros-jazzy-rviz-rendering, ros-jazzy-rviz2, ros-jazzy-vision-msgs, ros-jazzy-yaml-cpp-vendor, ros-jazzy-ros-workspace
+Description: RVIZ2 plugins for visualizing vision_msgs
