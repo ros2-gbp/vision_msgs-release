@@ -1,1 +1,1 @@
-{"base": "7a4e817", "parent": "debian/rolling/vision_msgs_rviz_plugins", "previous": "4e7d0f9", "trim": "", "trimbase": ""}
+{"base": "480cad6735a4", "parent": "debian/kilted/vision_msgs_rviz_plugins", "previous": "08be1fdf39b7", "trim": "", "trimbase": ""}
