@@ -1,0 +1,12 @@
+Source: ros-kilted-vision-msgs-rviz-plugins
+Section: misc
+Priority: optional
+Maintainer: Georg Novotny <georg.novotny@aon.at>
+Build-Depends: debhelper (>= 9.0.0), ros-kilted-ament-cmake, ros-kilted-ament-cmake-python, ros-kilted-ament-lint-auto <!nocheck>, ros-kilted-ament-lint-common <!nocheck>, ros-kilted-pluginlib, ros-kilted-rclcpp, ros-kilted-rclpy, ros-kilted-rviz-common, ros-kilted-rviz-default-plugins, ros-kilted-rviz-rendering, ros-kilted-rviz2, ros-kilted-vision-msgs, ros-kilted-yaml-cpp-vendor, ros-kilted-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kilted-vision-msgs-rviz-plugins
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-numpy, ros-kilted-pluginlib, ros-kilted-rclcpp, ros-kilted-rclpy, ros-kilted-rviz-common, ros-kilted-rviz-default-plugins, ros-kilted-rviz-rendering, ros-kilted-rviz2, ros-kilted-vision-msgs, ros-kilted-yaml-cpp-vendor, ros-kilted-ros-workspace
+Description: RVIZ2 plugins for visualizing vision_msgs
