@@ -1,1 +1,1 @@
-{"base": "42afb7d", "parent": "debian/rolling/vision_msgs", "previous": "b801848", "trim": "", "trimbase": ""}
+{"base": "ec324c11f586", "parent": "debian/kilted/vision_msgs", "previous": "02221dd55d8b", "trim": "", "trimbase": ""}
