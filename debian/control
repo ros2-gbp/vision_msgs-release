@@ -1,0 +1,12 @@
+Source: ros-lyrical-vision-msgs-rviz-plugins
+Section: misc
+Priority: optional
+Maintainer: Georg Novotny <georg.novotny@aon.at>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake, ros-lyrical-ament-cmake-python, ros-lyrical-ament-lint-auto <!nocheck>, ros-lyrical-ament-lint-common <!nocheck>, ros-lyrical-pluginlib, ros-lyrical-rclcpp, ros-lyrical-rclpy, ros-lyrical-rviz-common, ros-lyrical-rviz-default-plugins, ros-lyrical-rviz-rendering, ros-lyrical-rviz2, ros-lyrical-vision-msgs, ros-lyrical-yaml-cpp-vendor, ros-lyrical-ros-workspace
+Homepage: https://index.ros.org/p/vision_msgs_rviz_plugins/#lyrical
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-vision-msgs-rviz-plugins
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-numpy, ros-lyrical-pluginlib, ros-lyrical-rclcpp, ros-lyrical-rclpy, ros-lyrical-rviz-common, ros-lyrical-rviz-default-plugins, ros-lyrical-rviz-rendering, ros-lyrical-rviz2, ros-lyrical-vision-msgs, ros-lyrical-yaml-cpp-vendor, ros-lyrical-ros-workspace
+Description: RVIZ2 plugins for visualizing vision_msgs
