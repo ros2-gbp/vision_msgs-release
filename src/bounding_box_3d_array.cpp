@@ -29,6 +29,9 @@ BoundingBox3DArrayDisplay::BoundingBox3DArrayDisplay()
     "Alpha", 1.0, "Transparency", this, SLOT(updateAlpha()));
   color_property_ = new rviz_common::properties::ColorProperty(
     "Color", Qt::yellow, "Color of bounding box", this, SLOT(updateColor()));
+  lifetime_property_ = new rviz_common::properties::IntProperty(
+    "Lifetime", 0, "Bounding box 3D array lifetime", this, SLOT(updateLifetime()));
+
   color = Qt::yellow;
 }
 
@@ -56,6 +59,7 @@ void BoundingBox3DArrayDisplay::onInitialize()
 
   line_width = line_width_property_->getFloat();
   alpha = alpha_property_->getFloat();
+  lifetime = lifetime_property_->getInt();
 
   only_edge_ = only_edge_property_->getBool();
 }
@@ -77,7 +81,9 @@ void BoundingBox3DArrayDisplay::processMessage(
   }
 }
 
-void BoundingBox3DArrayDisplay::update(float wall_dt, float ros_dt)
+void BoundingBox3DArrayDisplay::update(
+  std::chrono::nanoseconds wall_dt,
+  std::chrono::nanoseconds ros_dt)
 {
   m_marker_common->update(wall_dt, ros_dt);
 }
@@ -104,6 +110,14 @@ void BoundingBox3DArrayDisplay::updateEdge()
     } else {
       showBoxes(latest_msg);
     }
+  }
+}
+
+void BoundingBox3DArrayDisplay::updateLifetime()
+{
+  lifetime = lifetime_property_->getInt();
+  if (latest_msg) {
+    processMessage(latest_msg);
   }
 }
 
