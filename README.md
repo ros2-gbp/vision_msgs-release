@@ -1,3 +1,28 @@
+## vision_msgs (rolling) - 4.3.0-1
+
+The packages in the `vision_msgs` repository were released into the `rolling` distro by running `/usr/bin/bloom-release vision_msgs --rosdistro rolling --track rolling` on `Wed, 18 Nov 2026 20:35:45 -0000`
+
+These packages were released:
+- `vision_msgs`
+- `vision_msgs_rviz_plugins`
+
+Version of package(s) in repository `vision_msgs`:
+
+- upstream repository: https://github.com/ros-perception/vision_msgs.git
+- release repository: https://github.com/ros2-gbp/vision_msgs-release.git
+- rosdistro version: `4.2.0-2`
+- old version: `4.2.0-2`
+- new version: `4.3.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.4`
+- catkin_pkg version: `1.1.1`
+- rosdep version: `0.27.0`
+- rosdistro version: `1.1.0`
+- vcstools version: `0.1.42`
+
+
 ## vision_msgs (lyrical) - 4.3.0-1
 
 The packages in the `vision_msgs` repository were released into the `lyrical` distro by running `/usr/bin/bloom-release vision_msgs --rosdistro lyrical --track lyrical` on `Wed, 18 Nov 2026 20:33:57 -0000`
