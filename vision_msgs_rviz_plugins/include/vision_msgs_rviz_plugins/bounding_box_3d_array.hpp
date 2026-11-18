@@ -16,10 +16,12 @@
 #define VISION_MSGS_RVIZ_PLUGINS__BOUNDING_BOX_3D_ARRAY_HPP_
 
 #include <QWidget>
+#include <chrono>
 #include <memory>
 #include <rviz_common/display.hpp>
 #include <rviz_common/properties/bool_property.hpp>
 #include <rviz_common/properties/float_property.hpp>
+#include <rviz_common/properties/int_property.hpp>
 #include <rviz_common/properties/color_property.hpp>
 #include <rviz_default_plugins/displays/marker/marker_common.hpp>
 #include <rviz_default_plugins/displays/marker_array/marker_array_display.hpp>
@@ -54,7 +56,7 @@ public:
   BOUNDING_BOX_3D_ARRAY_DISPLAY_HPP_PUBLIC
   void load(const rviz_common::Config & config) override;
   BOUNDING_BOX_3D_ARRAY_DISPLAY_HPP_PUBLIC
-  void update(float wall_dt, float ros_dt) override;
+  void update(std::chrono::nanoseconds wall_dt, std::chrono::nanoseconds ros_dt) override;
   BOUNDING_BOX_3D_ARRAY_DISPLAY_HPP_PUBLIC
   void reset() override;
 
@@ -66,6 +68,7 @@ private:
 protected:
   bool only_edge_;
   rviz_common::properties::BoolProperty * only_edge_property_;
+  rviz_common::properties::IntProperty * lifetime_property_;
   rviz_common::properties::FloatProperty * line_width_property_;
   rviz_common::properties::FloatProperty * alpha_property_;
   rviz_common::properties::ColorProperty * color_property_;
@@ -73,6 +76,7 @@ protected:
 protected Q_SLOTS:
   void updateEdge();
   void updateLineWidth();
+  void updateLifetime();
   void updateAlpha();
   void updateColor();
 };
